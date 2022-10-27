@@ -1,1 +1,3 @@
 # PortScanner
+
+Install: sudo make
