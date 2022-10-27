@@ -1,3 +1,4 @@
 # PortScanner
 
-Install: sudo make
+Install: sudo make install
+Uninstall: sudo make uninstall
