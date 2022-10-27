@@ -2,8 +2,6 @@ import netifaces
 import os
 from netaddr import IPAddress
 
-
-
 def getInterfaces():
     return netifaces.interfaces()
 
@@ -15,5 +13,4 @@ def formatAddress(interface):
         IPAddress(str(addrs[netifaces.AF_INET][0]['netmask'])).netmask_bits())
 
 
-interface = formatAddress(getInterfaces()[-1])
-os.system("rustscan -a " + interface + " --ulimit 5000")
+os.system("rustscan -a " + formatAddress(getInterfaces()[-1]) + " --ulimit 5000")
